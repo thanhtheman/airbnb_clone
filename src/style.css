@@ -3,6 +3,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    font-size: 16px;
+}
+
+/* h1 {
+    max-width: 500px;
+} */
 body {
     margin: 0;
 }
@@ -12,34 +19,138 @@ body {
     box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
 .nav--icon {
-    width: 175px;
-    padding: 22px 30px;
+    width: 10%;
+    margin: 2%;
 }
 
 .image2 {
     display: block;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
-    padding:15px 25px;
+    width: 100%;
+    margin: 2%;
 }
 
 .main--title {
     display: block;
-    margin-left: 25%;
-    margin-right: auto;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
     width: fit-content;
-    
-    font-size:400%;
+    font-size:3.5rem;
 }
 
 .main--paragraph {
     display: block;
-    text-align: left;
+    text-align: center;
     margin-left: 25%;
-    margin-right: auto;
+    margin-right: 25%;
     max-width: 20em;
-    padding: 5px 10px;
-    font-size:xx-large;
+    font-size: 2rem;
 }
 
+section {
+    padding: 20px;
+    margin: 7%;
+}
+
+
+.cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.card--image {
+    width: auto;
+    height: 40rem;
+    border-radius: 1rem;
+    margin-bottom: 2%;
+}
+
+.card--title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-stats {
+    display: flex;
+    align-items: center;
+}
+
+.card--star {
+    height: 1rem;
+}
+
+.card--price {
+    margin-top: auto;
+}
+
+/* .card {
+    position: relative;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    
+} We don't really need this styling as we create a <div className = 'parent'> to position our SOLD OUT badge (absolute position)*/
+
+.parent {
+    position: relative;
+}
+.card--badge {
+    position: absolute;
+    width: 30%;
+    text-align: center;
+    background-color: white;
+    padding: 0.5% 0.75%;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.city-name {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size:1.5rem;
+    color: rgb(243, 101, 101);
+}
+
+.container-profile {
+    display: flex;
+    height: 10rem;
+}
+
+.card-profile-image {
+    width:auto;
+    height: 60%;
+}
+.description {
+    display: block;
+    text-align: center;
+    margin: 5%;
+}
+
+@media screen and (max-width: 480px) {
+    .card--image {
+        width: 15rem;
+        height: 25rem;
+    }
+    .nav--icon {
+        width: 25%;
+        height: 25%;
+        margin: 5%;
+    }
+    .main--title {
+        font-size: 2rem;
+    }
+    .main--paragraph {
+        font-size: 1rem;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    
+}
